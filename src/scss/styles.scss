@@ -1,0 +1,31 @@
+@import "reset.scss";
+@import "style_icomoon.scss";
+@import "stylesheet.scss";
+
+@import "mixins.scss";
+@import "variables.scss";
+
+// Common
+@import "common/general.scss";
+@import "common/typography.scss";
+
+//parts
+@import "parts/hero.scss";
+@import "parts/projects.scss";
+@import "parts/news.scss";
+@import "parts/gallery.scss";
+@import "parts/map.scss";
+@import "parts/form-submit.scss";
+@import "parts/footer.scss";
+
+//@import "parts/services.scss";
+//@import "parts/gallery.scss";
+
+//components
+//@import "components/buttons.scss";
+
+//@import "parts/section__box";
+//@import "parts/we_do";
+//@import "parts/footer";
+//@import "parts/contact_us";
+//@import "parts/img-scroll";

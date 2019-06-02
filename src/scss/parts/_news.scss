@@ -1,0 +1,126 @@
+.section-news{
+  height: 1035px;
+  background-image: url('#{$path-img}bg_news.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section__header--news{
+  @include sectionTitle($color_white, 140px, 44px);
+}
+
+.news-slider{
+  margin-top: 100px;
+  background: transparent;
+
+  &__img{
+    max-height: 240px;
+    max-width: 370px;
+  }
+
+  &__item{
+    max-width: 370px;
+    min-height: 514px;
+    background-color: $color_white;
+  }
+
+  &__title{
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 28px 24px 10px 24px;
+    //padding: 0 20px;
+    font-size: 22px;
+    line-height: 34px;
+    color: $color-dark-gray;
+    font-family: $fnt-gotham-bold;
+    text-transform: uppercase;
+  }
+
+  &__description{
+    padding: 0 20px;
+    height: 58px;
+    font-size: 18px;
+    line-height: 30px;
+    color: $color-light-gray;
+    font-family: $fnt-open-sans;
+    overflow: hidden;
+    word-break: break-all;
+    //text-overflow: ellipsis;
+  }
+
+  &__public-block {
+      font-family: $fnt-gotham;
+      line-height: 22px;
+      padding: 0 20px;
+      display: table;
+      margin: 40px 0 30px;
+
+      &--img {
+        max-height: 60px;
+        max-width: 60px;
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        float: left;
+
+        &:after{
+          content: '';
+          clear: both;
+          display: block;
+        }
+      }
+
+      &--detail{
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 20px;
+      }
+
+      &--author{
+        font-size: 18px;
+        color: $color-dark-gray;
+        text-transform: uppercase;
+      }
+
+      &--date{
+        margin-top: 14px;
+        font-size: 14px;
+        color: $color-shadow-blue;
+      }
+  }
+
+}
+
+.news-slider__dots{
+  position: absolute;
+  margin-top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+
+  & li{
+    margin-right: 40px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+  }
+
+  button {
+    display: block;
+    width: 9px;
+    height: 9px;
+    border: 1px solid $color_white;
+    border-radius: 50%;
+    background-color: transparent;
+    text-indent: -9999px;
+  }
+
+  li.slick-active button {
+    background-color: $color_white;
+  }
+
+}

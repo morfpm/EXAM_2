@@ -1,0 +1,52 @@
+.footer {
+  position: relative;
+  height: 524px;
+  background-image: url('#{$path-img}footer_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $color_white;
+
+  &-navigator {
+    //position: relative;
+    padding-top: 215px;
+    display: flex;
+    justify-content: space-between;
+
+    &__social {
+      font-size: 0;
+
+      & li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+        font-size: 14px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      & a {
+        display: block;
+        @include ringedSymbol(40px);
+
+        &:hover {
+          background-color: $color_hover;
+        }
+      }
+
+    }
+  }
+
+  &__copyright{
+    margin-top: 30px;
+    font-size: 14px;
+    //line-height: 22px;
+    font-family: $fnt-gotham;
+
+    &--divider{
+      margin: 0 12px;
+    }
+  }
+}

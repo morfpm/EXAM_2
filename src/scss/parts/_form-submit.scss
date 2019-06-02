@@ -1,0 +1,85 @@
+.form-submit{
+  height: 450px;
+  width: 770px;
+  background-color: $color_white;
+  position: absolute;
+  top: -295px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $color-dark-gray;
+  font-size: 18px;
+  line-height: 34px;
+
+  &__title{
+    @include sectionTitle($color_dark-gray, 60px, 36px);
+    margin-bottom: 53px;
+  }
+
+  &__data{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info--left{
+    margin-left: 60px;
+    padding-left: 10px;
+  }
+
+  &__info--right{
+    height: 190px;
+    width: 370px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    align-content: flex-start;
+    padding-right: 58px;
+  }
+}
+
+.fs-data {
+
+  &__list{
+    padding-left: 58px;
+  }
+
+  &__item{
+    margin-bottom: 23px;
+
+  &:last-child{
+    margin-bottom: 0;
+    }
+  }
+
+  &__item--symbol {
+    font-size: 16px;
+    color: $color-shadow-violet;
+    margin-right: 5px;
+  }
+}
+.submit {
+
+
+  &__name{
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid $color-dark-gray;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  &__email{
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid $color-dark-gray;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 33px;
+
+  }
+
+  &__btn {
+    @include linkAsButton(16px 40px);
+    margin-top: 30px;
+    cursor: pointer;
+  }
+}

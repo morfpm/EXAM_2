@@ -1,0 +1,52 @@
+@mixin ringedSymbol($diameter){
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+  border: 1px solid $color_white;
+  text-align: center;
+  vertical-align: middle;
+  color: $color_white;
+  line-height: $diameter;
+}
+
+@mixin sectionTitle($color, $marg-top, $marg-bottom){
+  font-size: 44px;
+  line-height: 22px;
+  color: $color;
+  font-family: $fnt-gotham-bold;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:before{
+    display: block;
+    content: '';
+    height: 1px;
+    margin: $marg-top auto $marg-bottom;
+    width: 100px;
+    background-color: $color;
+  }
+}
+
+@mixin shadowImg($bias, $sh-color){
+  content: "";
+  display: block;
+  position: absolute;
+  top: -70px;
+  left: $bias;
+  height: inherit;
+  width: inherit;
+  z-index: -1;
+  background-color: $sh-color;
+}
+
+@mixin linkAsButton($paddings){
+  text-transform: uppercase;
+  color: $color-dark-gray;
+  font-size: 14px;
+  //line-height: 22px;
+  font-weight: 400;
+  font-family: $fnt-gotham;
+  border: 1px solid $color-dark-gray;
+  padding: $paddings;
+  background: $color_white;
+}
