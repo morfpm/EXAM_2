@@ -50,3 +50,16 @@
   padding: $paddings;
   background: $color_white;
 }
+
+@mixin customSliderBtn($pos) {
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: $pos;
+  @include ringedSymbol(40px);
+
+  &:hover{
+    background-color: $color_hover;
+  }
+
+}

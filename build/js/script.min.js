@@ -17,20 +17,14 @@ $(document).ready(function() {
     $('.js-slider__news').slick({
         dots: true,
         dotsClass: 'news-slider__dots',
-        arrows: true,
         infinite: true,
         speed: 300,
         slidesToShow: 3,
         adaptiveHeight: true,
-        slidesToScroll: 1
-//         prevArrow
-//             string (html|jQuery selector) | object (DOM node|jQuery object)
-// <button type="button" class="slick-prev">Previous</button>
-
-//         nextArrow
-//             string (html|jQuery selector) | object (DOM node|jQuery object)
-// <button type="button" class="slick-next">Next</button>
-
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: "<span class='my-custom-btn--left'><i class=\"fas fa-angle-left\"></i></span>",
+        nextArrow: "<span class='my-custom-btn--right'><i class=\"fas fa-angle-right\"></i></span>",
         // autoplay: true,
         // autoplaySpeed: 2500,
     })
@@ -210,16 +204,28 @@ function initMap() {
         document.getElementById('js-maps'), {
             zoom: 10,
             center: beetroot,
-
+            // gestureHandling: 'greedy',
+            gestureHandling: 'none',
+            // scrollWheel: false,
             disableDefaultUI: true,
             mapTypeId: 'roadmap'
         });
+
+    var myIcon = {
+        url: 'img/pin_1.png',
+        size: new google.maps.Size(80, 80),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(40, 40),
+        scaledSize: new google.maps.Size(80, 80)
+    };
+
     // The marker, positioned at Beetroot
     var marker = new google.maps.Marker({
         position: beetroot,
         map: map,
-
+        icon: myIcon,
     });
+
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map');
     // map.setMapTypeId('terrain');
